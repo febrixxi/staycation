@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import propTypes from "prop-Types";
+import propTypes from "prop-types";
 
 export default function Button(props) {
   const className = [props.className];
@@ -51,7 +51,7 @@ export default function Button(props) {
           style={props.style}
           onClick={onClick}
         >
-          {props.target}
+          {props.children}
         </Link>
       );
     }
@@ -68,7 +68,7 @@ export default function Button(props) {
   );
 }
 
-Button.protTypes = {
+Button.propTypes = {
   type: propTypes.oneOf(["button", "link"]),
   onClick: propTypes.func,
   href: propTypes.string,
